@@ -1,0 +1,70 @@
+"use strict";
+function showProductDetails(product) {
+    console.log(`O nome do produto é ${product.name} seu preço é R$${product.price}`);
+    if (product.isAvailable) {
+        console.log("O produto está disponivel");
+    }
+}
+const shirt = {
+    name: "Camisa",
+    price: 29.99,
+    isAvailable: true,
+};
+showProductDetails(shirt);
+function showUserDetails(user) {
+    console.log(`E-mail do usuário: ${user.email}`);
+    if (user.role) {
+        console.log(`Sua função no sistema é de: ${user.role}`);
+    }
+}
+const u1 = { email: "hanna.kelly@gmail.com", role: "Adm" };
+const u2 = { email: "hanna@teste.com" };
+showUserDetails(u1);
+showUserDetails(u2);
+const fusca = {
+    brand: 'Vw',
+    wheels: 4,
+};
+console.log(fusca);
+let coords = {
+    x: 10,
+};
+// coords.y = 'teste'
+coords.y = 15;
+console.log(coords);
+const arr1 = [1, 2, 3];
+const goku = {
+    name: "Goku",
+    age: 50,
+    superpowers: ['Kamehameha', 'Genki Dama'],
+};
+console.log(goku);
+const arnold = {
+    name: 'Arnold',
+    type: 'Shotgun',
+    caliber: 12,
+};
+console.log(arnold);
+console.log(arnold.caliber);
+// 7 - read only array
+let myArray = ['Maçã', 'Laranja', 'Pêra'];
+// myArray[3] = 'Mamão'
+myArray.forEach((item) => {
+    console.log('Fruta: ' + item);
+});
+myArray = myArray.map((item) => {
+    return `Fruta: ${item}`;
+});
+console.log(myArray);
+const myNumberArray = [1, 2, 3, 4, 5];
+const anotherUser = ["Hanna", 30];
+anotherUser[1] = "Kelly";
+console.log(anotherUser);
+// 9 - tuplas com readonly
+function showNumbers(numbers) {
+    // numbers[0] = 10
+    console.log(numbers[0]);
+    console.log(numbers[1]);
+}
+showNumbers([1, 2]);
+// showNumbers(['teste', 1])
